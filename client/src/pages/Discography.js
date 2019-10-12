@@ -7,16 +7,26 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Discography extends Component {
-    state = {
+  state = {
       records: [],
       artist: "",
       titleA: "",
       titleB: "",
       region: "",
-      city: "",
+      city: "", 
       releaseDate: "",
       image: ""
-    };
+  };
+
+  render() {
+      return (
+          <Container fluid>
+              <Jumbotron>
+                  <h1>Discography</h1>
+              </Jumbotron>
+          </Container>
+      )
+  };
 };
 
 export default Discography;

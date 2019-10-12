@@ -5,9 +5,9 @@ const recordSchema = new Schema({
   artist: { type: String, required: true },
   titleA: { type: String, required: true },
   titleB: { type: String, required: true },
-  region: String,
-  city: String,
+  cityRegion: String,
   releaseDate: String,
+  comments: String,
   date: { type: Date, default: Date.now },
   image: String
 });
