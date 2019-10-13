@@ -10,7 +10,7 @@ const recordSchema = new Schema({
   releaseDate: String,
   comments: String,
   date: { type: Date, default: Date.now },
-  image: String
+  image: String,
 });
 
 const Record = mongoose.model("Record", recordSchema);
