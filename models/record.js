@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const recordSchema = new Schema({
   artist: { type: String, required: true },
   titleA: { type: String, required: true },
-  titleB: { type: String, required: true },
+  titleB: String,
+  recordLabel: String,
   cityRegion: String,
   releaseDate: String,
   comments: String,

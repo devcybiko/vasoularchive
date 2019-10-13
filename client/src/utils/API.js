@@ -1,5 +1,7 @@
 import axios from "axios";
 
+var host_ = "http://localhost:3001";
+
 export default {
   // Gets all records
   getRecords: function() {
@@ -15,6 +17,6 @@ export default {
   },
   // Saves a record to the database
   saveRecord: function(recordData) {
-    return axios.post("/api/records", recordData);
+    return axios.post(host_ + "/api/records", recordData);
   }
 };

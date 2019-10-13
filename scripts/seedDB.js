@@ -13,12 +13,14 @@ const discographySeed = [
         artist: "Little Tommy",
         titleA: "I'm Still Hurt",
         titleB: "Baby Can't You See",
+        recordLabel: "Sound of Soul",
         cityRegion: "Richmond",
         releaseDate: "196x",
-        comments: "",
+        comments: "comment",
         date: new Date(Date.now()),
-        image: ""
-    }
+        image: "",
+        _v: "0",
+        }
 ]
 
 

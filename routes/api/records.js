@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const recordsController = require("../../controllers/recordsController");
+var host = "localhost:3001";
 
 // Matches with "/api/records"
 router.route("/")

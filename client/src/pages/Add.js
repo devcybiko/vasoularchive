@@ -11,9 +11,11 @@ class Add extends Component {
         artist: "",
         titleA: "",
         titleB: "",
+        recordLabel: "",
         cityRegion: "",
         releaseDate: "",
-        // image: ""
+        comments: "",
+        image: "",
     };
 
     handleFormSubmit = event => {
@@ -23,11 +25,13 @@ class Add extends Component {
                 artist: this.state.artist,
                 titleA: this.state.titleA,
                 titleB: this.state.titleB,
+                recordLabel: this.state.recordLabel,
                 cityRegion: this.state.cityRegion,
                 releaseDate: this.state.releaseDate,
-                // image: this.state.image
+                comments: this.state.comments,
+                image: this.state.image
             })
-                .then(this.setState({ artist: "", titleA: "", titleB: "", cityRegion: "", releaseDate: "", comments: "" }));
+                .then(this.setState({ artist: "", titleA: "", titleB: "", recordLabel: "", cityRegion: "", releaseDate: "", comments: "", image: "" }));
                 // .catch(err => console.log(err));
         }
     };
@@ -38,17 +42,6 @@ class Add extends Component {
             [name]: value
         });
     };
-
-    // componentDidMount() {
-    //     this.loadForm();
-    // };
-
-    // loadForm = () => {
-        
-    //         this.setState({ artist: "", titleA: "", titleB: "", cityRegion: "", releaseDate: "", comments: "" })
-        
-    //         .catch(err => console.log(err));
-    // };
 
     render() {
         return (
@@ -62,7 +55,7 @@ class Add extends Component {
                             name="artist"
                             placeholder="Name of artist or group"
                         />
-                        <Label>A Side:</Label>
+                        <Label>A Side (or album title if LP or EP):</Label>
                         <Input
                             value={this.state.titleA}
                             onChange={this.handleChange}
@@ -76,6 +69,13 @@ class Add extends Component {
                             name="titleB"
                             placeholder="B-Side title or if album, leave blank"
                         />
+                        <Label>Record Label (if no label, input 'no label'):</Label>
+                        <Input
+                            value={this.state.recordLabel}
+                            onChange={this.handleChange}
+                            name="recordLabel"
+                            placeholder="Record label name (if none, note 'no label')"
+                        />                       
                         <Label>City or Region:</Label>
                         <Input
                             value={this.state.cityRegion}
@@ -98,11 +98,11 @@ class Add extends Component {
                             placeholder="Add any relevant notes or comments you may have for this release."
                         />
                         <Label>Image of Record to Upload:</Label>
-                        {/* <ImageUpload
+                        <ImageUpload
                             value={this.state.image}
                             onChange={this.handleChange}
                             name="image"
-                        /> */}
+                        />
                         <FormBtn onClick={this.handleFormSubmit}>Submit Release</FormBtn>
 
                     </form>
