@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-// const db = require("./models");
 
+// const db = require("./models");
 
 
 app.use(function (req, res, next) {
@@ -28,7 +28,7 @@ app.use(routes);
 // app.get("/", express.static(path.join(__dirname, "./client/public/images/records")));
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/vasoularchive")
+mongoose.connect("mongodb+srv://abushman:<bncustom1>@vasouldb-kxfyq.mongodb.net/test?retryWrites=true&w=majority" || "mongodb://localhost/vasoularchive")
   .then(() => console.log("connected to vasoularchive MongoDB"))
   .catch(err => console.log(err));
 

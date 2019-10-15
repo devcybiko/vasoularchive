@@ -16,7 +16,7 @@ export function Label(props) {
 export function ImageUpload(props) {
   return (
     <div className="form-group">
-      <input type="file" class="form-control-file" id="imageUpload" {...props} />
+      <input type="file" className="form-control-file" id="imageUpload" {...props} />
     </div>
   )
 }
