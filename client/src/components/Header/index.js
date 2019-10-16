@@ -1,6 +1,12 @@
 import React from "react";
+import headerImage from "../../images/site/header.png"
+// const headImage = require("../../public/images/site/header.png")
 
-export function Header(props) {
-    const header = '../../../public/images/site/header.png';
-    return <img src={header} {...props} />
+export function TopImage(props) {
+    const styles = {
+        width: '80%',
+        margin: 'auto',
+        float: 'center'
+    } 
+    return <div className='container'><img src={headerImage} style={styles} {...props} /></div>
     };

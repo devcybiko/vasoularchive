@@ -15,10 +15,12 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log("...create");
+    console.log(req.body);
     db.Record
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .then(dbModel => {console.log(dbModel); res.json(dbModel)})
+      .catch(err => {console.error(err); res.status(422).json(err)});
   },
   update: function(req, res) {
     db.Record

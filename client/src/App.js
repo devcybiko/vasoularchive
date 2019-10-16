@@ -16,6 +16,7 @@ function App() {
           <Route exact path="/addentry" component={Add} />
           <Route exact path="/discography" component={Discography} />
           <Route exact path="/records/:id" component={Detail} />
+          
         </Switch>
       </div>
     </Router>
