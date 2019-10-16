@@ -30,6 +30,9 @@ class Home extends Component {
                 <Jumbotron>
                     <TopImage /> 
                 </Jumbotron>
+                <Jumbotron>
+                    <Link to="/discography">Discography List</Link>
+                </Jumbotron>
             </Container>
         )
     };
