@@ -9,13 +9,13 @@ import { Input, TextArea, FormBtn, Label, ImageUpload } from "../components/Form
 class Add extends Component {
 
     state = {
-        artist: "Greg",
-        titleA: "Title A",
-        titleB: "Title B",
-        recordLabel: "Motown",
-        cityRegion: "Delta Dawn",
-        releaseDate: "1955",
-        comments: "Supah!",
+        artist: "",
+        titleA: "",
+        titleB: "",
+        recordLabel: "",
+        cityRegion: "",
+        releaseDate: "",
+        comments: "",
         image: "",
         file: undefined
     };
@@ -117,7 +117,7 @@ class Add extends Component {
                         />
                         <Label>Notes on Release:</Label>
                         <TextArea
-                            value={this.state.comments || "I love rocknroll music"}
+                            value={this.state.comments}
                             onChange={this.handleChange}
                             name="comments"
                             placeholder="Add any relevant notes or comments you may have for this release."

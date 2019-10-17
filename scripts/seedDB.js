@@ -10,15 +10,15 @@ mongoose.connect(
 
 const discographySeed = [
     {
-        artist: "Little Tommy",
-        titleA: "I'm Still Hurt",
-        titleB: "Baby Can't You See",
+        artist: "Dickie Wonder",
+        titleA: "Nobody Knows",
+        titleB: "Story Of My Love",
         recordLabel: "Sound of Soul",
         cityRegion: "Richmond",
         releaseDate: "196x",
-        comments: "comment",
+        comments: "Locally distributed pressing contains a mix that doesn't have backing female group vocals, while the cameo/parkway distributed pressing contains a different mix with the background vocals.",
         date: new Date(Date.now()),
-        image: "",
+        image: "C:/fakepath/soundofsoul.jpg",
         _v: "0",
         }
 ]

@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Add from "./pages/Add";
@@ -16,7 +16,6 @@ function App() {
           <Route exact path="/addentry" component={Add} />
           <Route exact path="/discography" component={Discography} />
           <Route exact path="/records/:id" component={Detail} />
-          
         </Switch>
       </div>
     </Router>

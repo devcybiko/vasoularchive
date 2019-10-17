@@ -1,3 +1,10 @@
-div {
-    color: #08f01b
+body {
+    background: #7e5529;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

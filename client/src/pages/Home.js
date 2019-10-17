@@ -1,38 +1,29 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Container } from "../components/Grid";
+import { Card } from "../components/Card";
 import { TopImage } from "../components/Header";
+import Nav from "../components/Nav";
 
 class Home extends Component {
     state = {
-        records: [],
-        artist: "",
-        titleA: "",
-        titleB: "",
-        region: "",
-        city: "",
-        releaseDate: "",
-        image: ""
+        user: '',
     };
-
-
-    // componentDidMount() {
-    //     this.loadForm();
-    // };
 
     render() {
         return (
+            
             <Container fluid>
-                <Jumbotron>
-                    <TopImage /> 
-                </Jumbotron>
-                <Jumbotron>
+                <Container fluid>
+                    <Nav><Link to="/discography">The Archive</Link></Nav>
+                    <TopImage />
+                    <br />
+                    <Card>
+                        <h3>Mission Statement:</h3>
+                        <p>Test test</p>
+                    </Card>
                     <Link to="/discography">Discography List</Link>
-                </Jumbotron>
+                </Container>
             </Container>
         )
     };
