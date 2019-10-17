@@ -18,7 +18,7 @@ const discographySeed = [
         releaseDate: "196x",
         comments: "Locally distributed pressing contains a mix that doesn't have backing female group vocals, while the cameo/parkway distributed pressing contains a different mix with the background vocals.",
         date: new Date(Date.now()),
-        image: "C:/fakepath/soundofsoul.jpg",
+        image: "soundofsoul.jpg",
         _v: "0",
         }
 ]

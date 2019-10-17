@@ -4,6 +4,7 @@ import { Container } from "../components/Grid";
 import { Card } from "../components/Card";
 import { TopImage } from "../components/Header";
 import Nav from "../components/Nav";
+import Jumbotron from "../components/Jumbotron";
 
 class Home extends Component {
     state = {
@@ -12,17 +13,15 @@ class Home extends Component {
 
     render() {
         return (
-            
             <Container fluid>
                 <Container fluid>
-                    <Nav><Link to="/discography">The Archive</Link></Nav>
+                    <Nav><a className="active" href="#">HOME</a><a href="/discography">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
                     <TopImage />
                     <br />
-                    <Card>
+                    <Jumbotron>
                         <h3>Mission Statement:</h3>
                         <p>Test test</p>
-                    </Card>
-                    <Link to="/discography">Discography List</Link>
+                    </Jumbotron>
                 </Container>
             </Container>
         )

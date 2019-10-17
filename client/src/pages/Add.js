@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+import { Container } from "../components/Grid";
+import Nav from "../components/Nav";
 import { Input, TextArea, FormBtn, Label, ImageUpload } from "../components/Form";
 
 class Add extends Component {
@@ -50,7 +50,7 @@ class Add extends Component {
                 cityRegion: this.state.cityRegion,
                 releaseDate: this.state.releaseDate,
                 comments: this.state.comments,
-                image: this.state.image
+                image: this.state.file.name
             })
                 .then(this.setState({ artist: "", titleA: "", titleB: "", recordLabel: "", cityRegion: "", releaseDate: "", comments: "", image: "" }));
                 // .catch(err => console.log(err));
@@ -71,46 +71,47 @@ class Add extends Component {
     render() {
         return (
             <Container fluid>
+                <Nav><a className="active" href="/">HOME</a><a href="/discography">THE ARCHIVE</a><a href="#">ADD ENTRY</a></Nav>
                 <Jumbotron>
                     <form>
                         <Label>Artist:</Label>
                         <Input
-                            value={this.state.artist || "Greg"}
+                            value={this.state.artist}
                             onChange={this.handleChange}
                             name="artist"
                             placeholder="Name of artist or group"
                         />
                         <Label>A Side (or album title if LP or EP):</Label>
                         <Input
-                            value={this.state.titleA  || "Title A"}
+                            value={this.state.titleA}
                             onChange={this.handleChange}
                             name="titleA"
                             placeholder="A-Side title or Album title"
                         />
                         <Label>B Side:</Label>
                         <Input
-                            value={this.state.titleB || "Title B"}
+                            value={this.state.titleB}
                             onChange={this.handleChange}
                             name="titleB"
                             placeholder="B-Side title or if album, leave blank"
                         />
                         <Label>Record Label (if no label, input 'no label'):</Label>
                         <Input
-                            value={this.state.recordLabel || "record label"}
+                            value={this.state.recordLabel}
                             onChange={this.handleChange}
                             name="recordLabel"
                             placeholder="Record label name (if none, note 'no label')"
                         />                       
                         <Label>City or Region:</Label>
                         <Input
-                            value={this.state.cityRegion || "MoTown"}
+                            value={this.state.cityRegion}
                             onChange={this.handleChange}
                             name="cityRegion"
                             placeholder="City/Town or general region of release"
                         />
                         <Label>Date of Release:</Label>
                         <Input
-                            value={this.state.releaseDate || "12-04-1962"}
+                            value={this.state.releaseDate}
                             onChange={this.handleChange}
                             name="releaseDate"
                             placeholder="Exact or approximate release date"
@@ -128,6 +129,7 @@ class Add extends Component {
                             onChange={this.handleChange}
                             name="image"
                         />
+                        <br />
                         <FormBtn onClick={this.handleFormSubmit}>Submit Release</FormBtn>
                     </form>
                 </Jumbotron>

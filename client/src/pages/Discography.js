@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+import { Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
+import Nav from "../components/Nav";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 
 class Discography extends Component {
@@ -26,6 +27,7 @@ class Discography extends Component {
     render() {
         return (
             <Container fluid>
+                <Nav><a className="active" href="/">HOME</a><a href="#">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
                 <Jumbotron>
                     {this.state.discography.length ? (
                         <List>

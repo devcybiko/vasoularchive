@@ -1,11 +1,16 @@
 const express = require("express");
-// const Record = require("./models");
 const mongoose = require("mongoose");
+var mongojs = require("mongojs");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+var databaseUrl = "vasoularchive";
+var collections = ["records"];
+var db = mongojs(databaseUrl, collections);
 
-// const db = require("./models");
+db.on("error", function(error) {
+  console.log("Database Error:", error);
+});
 
 
 app.use(function (req, res, next) {
