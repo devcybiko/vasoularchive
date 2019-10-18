@@ -14,15 +14,13 @@ class Home extends Component {
     render() {
         return (
             <Container fluid>
-                <Container fluid>
-                    <Nav><a className="active" href="#">HOME</a><a href="/discography">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
-                    <TopImage />
-                    <br />
-                    <Jumbotron>
-                        <h3>Mission Statement:</h3>
-                        <p>Test test</p>
-                    </Jumbotron>
-                </Container>
+                <Nav><a href="#" id="selected">HOME</a><a href="/discography">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
+                <TopImage />
+                <br />
+                <Jumbotron>
+                    <h3>Mission Statement:</h3>
+                    <p>Test test</p>
+                </Jumbotron>
             </Container>
         )
     };

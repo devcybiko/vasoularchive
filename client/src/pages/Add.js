@@ -71,7 +71,7 @@ class Add extends Component {
     render() {
         return (
             <Container fluid>
-                <Nav><a className="active" href="/">HOME</a><a href="/discography">THE ARCHIVE</a><a href="#">ADD ENTRY</a></Nav>
+                <Nav><a className="active" href="/">HOME</a><a href="/discography">THE ARCHIVE</a><a href="#" id="selected">ADD ENTRY</a></Nav>
                 <Jumbotron>
                     <form>
                         <Label>Artist:</Label>

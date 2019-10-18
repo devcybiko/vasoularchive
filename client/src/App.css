@@ -17,3 +17,7 @@ body {
 #returnedInfo {
     font-size: 20px;
 }
+
+#selected {
+    background-color: #94202f;
+}

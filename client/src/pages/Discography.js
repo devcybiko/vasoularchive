@@ -27,7 +27,7 @@ class Discography extends Component {
     render() {
         return (
             <Container fluid>
-                <Nav><a className="active" href="/">HOME</a><a href="#">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
+                <Nav><a className="active" href="/">HOME</a><a href="#" id="selected">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
                 <Jumbotron>
                     {this.state.discography.length ? (
                         <List>
