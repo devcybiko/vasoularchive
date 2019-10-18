@@ -29,7 +29,7 @@ app.use(routes);
 
 // Start the API server
 app.listen(PORT, function () {
-  var MONGODB_URI = process.env.MONGODDB_URI || "mongodb://localhost/vasoularchive"
+  var MONGODB_URI = process.env.MONGODDB_URI || "mongodb://localhost/vasoularchive";
   mongoose.connect(MONGODB_URI)
   .then(() => console.log("connected to vasoularchive MongoDB"))
   .catch(err => console.log(err));
