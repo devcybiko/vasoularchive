@@ -33,7 +33,7 @@ class Add extends Component {
             const formData = new FormData();
             formData.append("file", file, this.state.image);
 
-            req.open("POST", "http://localhost:3001/upload");
+            req.open("POST", "/upload");
             req.send(formData);
         })
     }
