@@ -1,0 +1,8 @@
+div.card {  
+  margin: auto;
+  width: 100%;
+  display: flex;
+  border: 4px solid #da2f47;
+  padding: 20px;
+  float: inline-start;
+}
