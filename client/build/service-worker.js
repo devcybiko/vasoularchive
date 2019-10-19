@@ -14,7 +14,11 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
+<<<<<<< HEAD
   "/precache-manifest.e088a1ef9c6e2e46843bc88f0b7ab33d.js"
+=======
+  "/precache-manifest.43ad003dd49e54583929c81c26659788.js"
+>>>>>>> parent of 1373698... table fully functioning, added media css, begin work on deploy
 );
 
 self.addEventListener('message', (event) => {

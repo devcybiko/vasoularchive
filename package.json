@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "main": "server.js",
-  "engines": {
-    "node": "10.16.0"
-  },
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "formidable": "^1.2.1",
@@ -23,11 +21,13 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "seed": "node scripts/seedDB.js",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
