@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
 import Nav from "../components/Nav";
-// import { Input, TextArea, FormBtn } from "../components/Form";
+import Jumbotron from "../components/Jumbotron";
+import { List, ListItem } from "../components/List";
 
-class Discography extends Component {
+class Discography2 extends React.Component {
     state = {
         discography: [],
     };
@@ -15,6 +15,10 @@ class Discography extends Component {
     componentDidMount() {
         this.loadDiscography();
     };
+
+    CellFormatter(cell, row) {
+        return (<div><a href={"records" + "/" + row._id} id="tableLink">{cell}</a></div>);
+    }
 
     loadDiscography = () => {
         API.getRecords()
@@ -26,7 +30,22 @@ class Discography extends Component {
 
     render() {
         return (
-            <Container fluid>
+            <div>
+                <div id="compView">
+                    <Container fluid>
+                        <Nav><a className="active" href="/">HOME</a><a href="#" id="selected">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
+                        <Jumbotron>
+                            <BootstrapTable data={this.state.discography} bodyStyle={{ background: '#dbb286' }} options={this.options} pagination search>
+                                <TableHeaderColumn dataField='id' dataField='artist' dataFormat={this.CellFormatter} isKey dataSort>Artist or Group <span id="tiny">(click tab to sort by)</span></TableHeaderColumn>
+                                <TableHeaderColumn dataField='titleA' >A-Side</TableHeaderColumn>
+                                <TableHeaderColumn dataField='titleB' >B-Side</TableHeaderColumn>
+                                <TableHeaderColumn dataField='recordLabel' dataSort>Label <span id="tiny">(click tab to sort by)</span></TableHeaderColumn>
+                                <TableHeaderColumn dataField='cityRegion' dataSort>City or Region <span id="tiny">(click tab to sort by)</span></TableHeaderColumn>
+                            </BootstrapTable>
+                        </Jumbotron>
+                    </Container>
+                </div ><div id="smallScreen">
+                <Container fluid>
                 <Nav><a className="active" href="/">HOME</a><a href="#" id="selected">THE ARCHIVE</a><a href="/addentry">ADD ENTRY</a></Nav>
                 <Jumbotron>
                     {this.state.discography.length ? (
@@ -46,8 +65,10 @@ class Discography extends Component {
                     )}
                 </Jumbotron>
             </Container>
-        )
-    };
-};
+            </div></div>
+        );
+    }
 
-export default Discography;
+
+}
+export default Discography2;    
