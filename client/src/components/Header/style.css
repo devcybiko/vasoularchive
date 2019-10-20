@@ -17,7 +17,9 @@ div.card {
 
 h1.card-title {
     text-align: center;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     font-size: 70px;
-    color: #da2f47
+    color: #da2f47;
+    font-family: 'Acme', sans-serif;
 }
+
