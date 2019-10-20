@@ -7,7 +7,7 @@ export function TopImage(props) {
 
     return <div className='card'>
              <img className='card-img-top' id="header" src={headerImage} {...props} />
-             <h1 className='card-title'>The Virginia Soul Archive</h1>
+             <h1 className='card-title' id='title'>The Virginia Soul Archive</h1>
            </div>
     
 };

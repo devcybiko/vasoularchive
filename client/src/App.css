@@ -75,6 +75,10 @@ th {
       padding: 0;
   }
 
+  #header {
+    font-family: 'Acme', sans-serif;
+  }
+
   @media only screen and (max-width: 600px) {
     #compView {
       display: none;
